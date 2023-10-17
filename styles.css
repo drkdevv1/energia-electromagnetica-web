@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.sidebar_menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 78px;
+    background: #356859;
+    padding: 6px 14px;
+    z-index: 99;
+    transition: all 0.5s ease;
+}
+
+.sidebar_menu .Logo {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.sidebar_menu .Logo .Text_Logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.sidebar_menu.open {
+    width: 300px;
+}
+
+.sidebar_menu .Logo #Button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: all 0.4s ease;
+    font-size: 23px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.sidebar_menu .Logo .icon {
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.sidebar_menu.open .Logo .icon,
+.sidebar_menu.open .Logo .Text_Logo {
+    opacity: 1;
+}
+
+
+.sidebar_menu.open .Logo #Button {
+    text-align: right;
+}
+
+.sidebar_menu i {
+    color: #FFFBE6;
+    height: 60px;
+    min-width: 50px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.sidebar_menu .Nav_Item {
+    margin-top: 20px;
+    height: 100%;
+}
+
+.sidebar_menu li {
+    position: relative;
+    margin: 8px 0;
+    list-style: none;
+}
+
+.sidebar_menu li .Menu_btn {
+    position: absolute;
+    top: -20px;
+    left: calc(100% + 15px);
+    z-index: 3;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.382);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: 0s;
+}
+
+.sidebar_menu li:hover .Menu_btn {
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.4s ease;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sidebar_menu.open li .Menu_btn {
+    display: none;
+}
+
+
+.sidebar_menu li a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 17px;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    background: #356859;
+}
+
+.sidebar_menu li a:hover {
+    background: #FFF;
+}
+
+.sidebar_menu li a .Item_Name {
+    color: #FFFBE6;
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.sidebar_menu.open li a .Item_Name {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar_menu li a:hover .Item_Name,
+.sidebar_menu li a:hover i {
+    transition: all 0.5s ease;
+    color: #356859;
+}
+
+.sidebar_menu li i {
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    border-radius: 17px;
+}
+
+
+.sidebar_menu li img {
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-right: 10px;
+}
+
+.img-centrar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    border-radius: 4%;
+}
+
+.img-centro1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    border-radius: 4%;
+}
+
+
+.img-tunel {
+    min-width: 200px;
+    width: 31%;
+    max-width: 100%;
+    float: left;
+    margin-right: 20px;
+    border-radius: 4%;
+
+}
+
+.img-libro {
+    min-width: 150px;
+    width: 20%;
+    max-width: 100%;
+    float: left;
+
+    margin-left: 10px;
+    margin-right: 20px;
+
+    border-radius: 4%;
+
+}
+
+.img-cognicion {
+    min-width: 300px;
+    width: 37%;
+    max-width: 100%;
+    float: left;
+
+    margin-right: 20px;
+
+    border-radius: 4%;
+
+}
+
+.video-container {
+    width: 90%;
+    text-align: center;
+    padding: 16px 0;
+    position: relative;
+    overflow: hidden;
+    /* Este padding-bottom determina el aspect ratio, 56.25% es para 16:9 */
+    padding-bottom: 56.25%;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-container-vertical {
+    width: 100%;
+    max-width: 267px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 78%;
+    /* Esta es la relación de aspecto, que es height/width. 476/267 ≈ 178% */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container-vertical iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.subrayado {
+    text-decoration: underline;
+}
+
+.subrayado-cursiva {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.cursiva {
+    font-style: italic;
+}
+
+.resaltado {
+    color: #333;
+    font-size: 18px;
+    background-color: lightgray;
+}
+
+.resaltado-verde {
+    color: #333;
+    font-size: 17px;
+    background-color: rgb(0, 255, 0);
+}
+
+.resaltado-rosa {
+    color: white;
+    font-size: 17px;
+    background-color: rgb(228, 20, 228);
+}
+
+.subrayado-verde {
+    text-decoration: underline;
+    color: rgb(66, 189, 66);
+}
+
+.sidebar_menu.open~.Dashboard_Text {
+    left: 250px;
+    width: calc(100% - 250px);
+}
+
+
+.Dashboard_Text .Child_Text {
+    display: inline-block;
+    color: #0379ff;
+    font-size: 24px;
+    font-weight: 450;
+    margin: 14px;
+}
+
+h3 {
+    color: #57897C;
+    font-size: 20px;
+}
+
+h4 {
+    color: #78A89E;
+    font-size: 18px;
+}
+
+/* Estilización del contenido principal */
+
+
+.Dashboard_Text h1,
+.Dashboard_Text h2 {
+    color: #356859;
+    margin-bottom: 1rem;
+}
+
+.Dashboard_Text p {
+    margin-bottom: 1.5rem;
+    text-align: left;
+    font-size: 1rem;
+    color: #333;
+}
+
+
+.centr- {
+    display: block;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #333;
+    margin: 1.5rem 0;
+}
+
+
+.Dashboard_Text {
+    position: relative;
+    background-color: #F5F5F5;
+    min-height: 100vh;
+    top: 0;
+    left: 78px;
+    padding: 2rem;
+    line-height: 1.6;
+    width: calc(100% - 78px);
+    display: flex;
+    justify-content: center;
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.main-container {
+    max-width: 910px;
+    width: 100%;
+    padding: 19px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+
+.main-header {
+    background-color: #356859;
+    color: #FFFBE6;
+    text-align: center;
+    padding: 27px 0;
+    padding-left: 110px;
+    font-size: 1.9em;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-title {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+/* Estilos para la galería de imágenes */
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.gallery-item {
+    width: 200px;
+    margin: 10px;
+    flex: 1 0 22%;
+    margin: 1.5%;
+    border: 1px solid #ddd;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center;
+}
+
+.gallery-item img {
+    max-width: 90%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+}
+
+.img-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.img-grid img {
+    border-radius: 4%;
+    width: 80%;
+    max-width: 50%;
+    height: auto;
+}
+
+/* Ajustar los encabezados para dispositivos móviles */
+@media (max-width: 1500px) {
+    .main-header {
+        padding-left: 76px;
+        font-size: 1.4rem;
+    }
+}
+
+@media(max-width:850px) {
+    .video-container-vertical {
+        max-width: 90%;
+        padding-bottom: 180%;
+    }
+}
+
+@media(max-width:768px) {
+    .sidebar_menu.open {
+        width: 100vw;
+    }
+
+    .Dashboard_Text h1,
+    .Dashboard_Text h2 {
+        font-size: 1.2rem;
+    }
+
+    .main-container {
+        width: 102%;
+    }
+
+    .video-container-vertical {
+        max-width: 90%;
+        padding-bottom: 180%;
+    }
+}
+
+@media (max-width: 420px) {
+    .sidebar_menu li .Menu_btn {
+        display: none;
+    }
+
+    .video-container-vertical {
+        max-width: 90%;
+        padding-bottom: 180%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .video-container {
+        width: 90%;
+        height: auto;
+    }
+
+    .video-container-vertical {
+        max-width: 90%;
+        padding-bottom: 180%;
+    }
+}
