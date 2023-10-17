@@ -222,12 +222,11 @@
 
 .video-container {
     width: 90%;
-    margin: 0 auto;
     text-align: center;
     padding: 16px 0;
     position: relative;
     overflow: hidden;
-    /* Este padding-bottom determina el aspect ratio, 56.25% es para 16:9 */
+    margin: 0 auto;
     padding-bottom: 56.25%;
 }
 
@@ -339,7 +338,7 @@ h4 {
 .centr- {
     display: block;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #333;
     margin: 1.5rem 0;
 }
@@ -381,14 +380,15 @@ h4 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
+
+/* Estilos para la galería de imágenes */
 .gallery-title {
     text-align: center;
     margin-top: 2rem;
-    font-size: 2.2rem;
+    font-size: 2.8rem;
     font-weight: bold;
 }
-
-/* Estilos para la galería de imágenes */
 
 .gallery-grid {
     display: flex;
@@ -417,6 +417,8 @@ h4 {
     cursor: pointer;
 }
 
+
+
 .gallery-item:hover {
     transform: scale(1.1);
 }
@@ -435,12 +437,50 @@ h4 {
     height: auto;
 }
 
+.btn-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+.Dashboard_Text .centrar-txt p {
+    text-align: center;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+
+.contact-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #356859;
+    /* o cualquier otro color que prefieras */
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #4b8a31;
+    /* un tono más oscuro para el hover */
+}
+
+
 /* Ajustar los encabezados para dispositivos móviles */
 @media (max-width: 1500px) {
     .main-header {
         padding-left: 76px;
         font-size: 1.4rem;
     }
+
+    .gallery-title {
+        font-size: 2.5rem;
+        /* Ajusta este valor según lo grande que quieras que sea */
+    }
+
 }
 
 @media(max-width:850px) {
@@ -448,6 +488,12 @@ h4 {
         max-width: 90%;
         padding-bottom: 180%;
     }
+
+    .gallery-title {
+        font-size: 2.5rem;
+        /* Ajusta este valor según lo grande que quieras que sea */
+    }
+
 }
 
 @media(max-width:768px) {
@@ -457,7 +503,12 @@ h4 {
 
     .Dashboard_Text h1,
     .Dashboard_Text h2 {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
+    }
+
+    .gallery-title {
+        font-size: 2.8rem;
+        /* Ajusta este valor según lo grande que quieras que sea */
     }
 
     .main-container {
@@ -475,6 +526,11 @@ h4 {
         display: none;
     }
 
+    .gallery-title {
+        font-size: 2.5rem;
+        /* Ajusta este valor según lo grande que quieras que sea */
+    }
+
     .video-container-vertical {
         max-width: 90%;
         padding-bottom: 180%;
@@ -486,6 +542,11 @@ h4 {
     .video-container {
         width: 90%;
         height: auto;
+    }
+
+    .gallery-title {
+        font-size: 2.5rem;
+        /* Ajusta este valor según lo grande que quieras que sea */
     }
 
     .video-container-vertical {
