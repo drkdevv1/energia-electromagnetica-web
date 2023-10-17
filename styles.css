@@ -222,6 +222,7 @@
 
 .video-container {
     width: 90%;
+    margin: 0 auto;
     text-align: center;
     padding: 16px 0;
     position: relative;
