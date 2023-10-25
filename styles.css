@@ -172,7 +172,17 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 350px;
+    height: auto;
     max-width: 100%;
+    border-radius: 4%;
+}
+
+.img-centrar2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70%;
     border-radius: 4%;
 }
 
@@ -182,6 +192,14 @@
     margin-right: auto;
     max-width: 100%;
     border-radius: 4%;
+}
+
+.sangria-izquierda {
+    margin-left: 50px;
+    /* Añade espacio exterior al elemento */
+    /* O alternativamente: */
+    /* padding-left: 50px; */
+    /* Añade espacio interior al elemento */
 }
 
 .comments-section {
@@ -212,10 +230,10 @@
 }
 
 .img-cognicion {
-    min-width: 250px;
-    width: 36%;
+    min-width: 200px;
+    width: 50%;
     max-width: 100%;
-    float: left;
+    float: right;
     margin-right: 20px;
     border-radius: 4%;
 }
@@ -269,6 +287,18 @@
 
 .cursiva {
     font-style: italic;
+}
+
+.green-- {
+    color: olivedrab;
+}
+
+.red-sub {
+    color: red;
+}
+
+.blue-sub {
+    color: #0379ff;
 }
 
 .resaltado {
@@ -339,7 +369,7 @@ h4 {
     display: block;
     text-align: center;
     font-size: 1.2rem;
-    color: #333;
+    color: olivedrab;
     margin: 1.5rem 0;
 }
 
