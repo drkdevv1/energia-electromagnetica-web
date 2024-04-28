@@ -7,14 +7,18 @@
     font-family: "Poppins", sans-serif;
 }
 
+body {
+    background-color: #f5f5f5;
+}
+
 .sidebar_menu {
     position: fixed;
     left: 0;
     top: 0;
     height: 100%;
-    width: 78px;
+    width: 70px;
     background: #356859;
-    padding: 6px 14px;
+    padding: 6px 10px;
     z-index: 99;
     transition: all 0.5s ease;
 }
@@ -94,7 +98,7 @@
     background: #fff;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.382);
     padding: 6px 12px;
-    border-radius: 6px;
+    border-radius: 20px;
     font-size: 15px;
     font-weight: 400;
     opacity: 0;
@@ -190,7 +194,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 100%;
+    max-width: 80%;
     border-radius: 4%;
 }
 
@@ -219,14 +223,11 @@
 .img-libro {
     min-width: 150px;
     width: 20%;
-    max-width: 100%;
+    /*max-width: 100%;*/
     float: left;
-
     margin-left: 10px;
     margin-right: 20px;
-
     border-radius: 4%;
-
 }
 
 .img-cognicion {
@@ -379,7 +380,7 @@ h4 {
     background-color: #F5F5F5;
     min-height: 100vh;
     top: 0;
-    left: 78px;
+    left: 40px;
     padding: 2rem;
     line-height: 1.6;
     width: calc(100% - 78px);
@@ -390,13 +391,15 @@ h4 {
 }
 
 .main-container {
-    max-width: 910px;
     width: 100%;
-    padding: 19px;
+    max-width: 900px;
+    padding: 14px;
     background-color: #FFFFFF;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border-radius: 2px;
+    border-radius: 5px;
+    margin: 0 auto;
 }
+
 
 
 .main-header {
@@ -504,8 +507,13 @@ h4 {
 /* Ajustar los encabezados para dispositivos móviles */
 @media (max-width: 1500px) {
     .main-header {
-        padding-left: 76px;
+        padding-left: 75px;
         font-size: 1.4rem;
+    }
+
+    .main-container {
+        min-width: 103%;
+        margin-left: 32px;
     }
 
     .gallery-title {
@@ -525,12 +533,21 @@ h4 {
 
 }
 
-@media(max-width:850px) {
+@media(max-width:900px) {
+    .main-header {
+        padding-left: 75px;
+        font-size: 1.2rem;
+    }
+
     .video-container-vertical {
         max-width: 90%;
         padding-bottom: 180%;
     }
 
+    .main-container {
+        min-width: 110 %;
+    }
+
     .img-libro {
         min-width: 90px;
         width: 15%;
@@ -548,7 +565,13 @@ h4 {
 
 }
 
+
 @media(max-width:768px) {
+    .main-header {
+        padding-left: 75px;
+        font-size: 1.2rem;
+    }
+
     .sidebar_menu.open {
         width: 100vw;
     }
@@ -563,9 +586,12 @@ h4 {
         border-radius: 4%;
     }
 
-    .Dashboard_Text h1,
+    .Dashboard_Text h1 {
+        font-size: 1.3rem;
+    }
+
     .Dashboard_Text h2 {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
     }
 
     .gallery-title {
@@ -574,7 +600,8 @@ h4 {
     }
 
     .main-container {
-        width: 102%;
+        margin-left: 10px;
+        min-width: 106%;
     }
 
     .video-container-vertical {
@@ -583,7 +610,16 @@ h4 {
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 500px) {
+    .main-header {
+        padding-left: 75px;
+        font-size: 1.2rem;
+    }
+
+    .main-container {
+        min-width: 124%;
+    }
+
     .sidebar_menu li .Menu_btn {
         display: none;
     }
@@ -609,7 +645,11 @@ h4 {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 450px) {
+    .main-header {
+        padding-left: 75px;
+        font-size: 1rem;
+    }
 
     .video-container {
         width: 90%;
@@ -624,6 +664,112 @@ h4 {
         margin-left: 10px;
         margin-right: 20px;
         border-radius: 4%;
+    }
+
+    .main-container {
+        margin-left: 10px;
+        min-width: 120%;
+    }
+
+    .gallery-title {
+        font-size: 2.5rem;
+        /* Ajusta este valor según lo grande que quieras que sea */
+    }
+
+    .video-container-vertical {
+        max-width: 90%;
+        padding-bottom: 180%;
+    }
+}
+
+@media (max-width: 390px) {
+    .main-header {
+        padding-left: 75px;
+        font-size: 1rem;
+    }
+
+    .video-container {
+        width: 90%;
+        height: auto;
+    }
+
+    .img-libro {
+        min-width: 90px;
+        width: 15%;
+        max-width: 100%;
+        float: left;
+        margin-left: 10px;
+        margin-right: 20px;
+        border-radius: 4%;
+    }
+
+    .main-container {
+        margin-left: 29px;
+        min-width: 105%;
+    }
+
+    .gallery-title {
+        font-size: 2.5rem;
+        /* Ajusta este valor según lo grande que quieras que sea */
+    }
+
+    .video-container-vertical {
+        max-width: 90%;
+        padding-bottom: 180%;
+    }
+}
+
+@media (max-width: 350px) {
+    .main-header {
+        padding-left: 75px;
+        font-size: 0.9rem;
+    }
+
+    .sidebar_menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 60px;
+        background: #356859;
+        padding: 6px 6px;
+        z-index: 99;
+        transition: all 0.5s ease;
+    }
+
+    .Dashboard_Text h1,
+    .Dashboard_Text h2 {
+        color: #356859;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .Dashboard_Text p {
+        margin-bottom: 1.5rem;
+        text-align: left;
+        font-size: 0.9rem;
+        color: #333;
+    }
+
+    .video-container {
+        width: 90%;
+        height: auto;
+    }
+
+    .img-libro {
+        min-width: 90px;
+        width: 15%;
+        max-width: 100%;
+        float: left;
+        margin-left: 10px;
+        margin-right: 20px;
+        border-radius: 4%;
+    }
+
+
+    .main-container {
+        margin-left: 30px;
+        min-width: 90%;
     }
 
     .gallery-title {
