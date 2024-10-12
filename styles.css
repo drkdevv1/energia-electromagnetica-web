@@ -9,6 +9,7 @@
 
 body {
     background-color: #f5f5f5;
+    overflow-x: hidden;
 }
 
 .sidebar_menu {
@@ -21,6 +22,10 @@ body {
     padding: 6px 10px;
     z-index: 99;
     transition: all 0.5s ease;
+}
+
+.sidebar_menu.open {
+    width: 300px;
 }
 
 .sidebar_menu .Logo {
@@ -36,10 +41,6 @@ body {
     font-weight: 600;
     opacity: 0;
     transition: all 0.5s ease;
-}
-
-.sidebar_menu.open {
-    width: 300px;
 }
 
 .sidebar_menu .Logo #Button {
@@ -68,7 +69,9 @@ body {
 
 .sidebar_menu.open .Logo #Button {
     text-align: right;
+    margin-right: 22px;
 }
+
 
 .sidebar_menu i {
     color: #FFFBE6;
@@ -172,11 +175,13 @@ body {
     margin-right: 10px;
 }
 
+
+
 .img-centrar {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 350px;
+    width: 100%;
     height: auto;
     max-width: 100%;
     border-radius: 4%;
@@ -221,14 +226,14 @@ body {
 }
 
 .img-libro {
-    min-width: 150px;
-    width: 20%;
+    width: 150px;
     /*max-width: 100%;*/
     float: left;
     margin-left: 10px;
     margin-right: 20px;
     border-radius: 4%;
 }
+
 
 .img-cognicion {
     min-width: 200px;
@@ -325,12 +330,6 @@ body {
     color: rgb(66, 189, 66);
 }
 
-.sidebar_menu.open~.Dashboard_Text {
-    left: 250px;
-    width: calc(100% - 250px);
-}
-
-
 .Dashboard_Text .Child_Text {
     display: inline-block;
     color: #0379ff;
@@ -383,7 +382,7 @@ h4 {
     left: 40px;
     padding: 2rem;
     line-height: 1.6;
-    width: calc(100% - 78px);
+    width: calc(100% - 77px);
     display: flex;
     justify-content: center;
     transition: all 0.5s ease;
@@ -397,21 +396,22 @@ h4 {
     background-color: #FFFFFF;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    margin: 0 auto;
+    margin-top: 80px;
 }
 
 .main-header {
     background-color: #356859;
     color: #FFFBE6;
     text-align: center;
-    padding: 27px 0;
+    padding: 20px 0;
     padding-left: 110px;
     font-size: 1.9em;
     font-weight: bold;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+    position: fixed;
+    width: 100%;
 }
-
-
 
 /* Estilos para la galería de imágenes */
 .gallery-title {
@@ -470,17 +470,6 @@ h4 {
     height: auto;
 }
 
-@media (max-width: 768px) {
-    .img-grid {
-        flex-direction: column;
-    }
-
-    .img-grid img {
-        width: 100%;
-        height: 100%;
-        max-width: 100%;
-    }
-}
 
 .btn-container {
     text-align: center;
@@ -522,12 +511,8 @@ h4 {
     }
 
     .main-container {
-        min-width: 103%;
+        width: 103%;
         margin-left: 32px;
-    }
-
-    .gallery-title {
-        font-size: 2.5rem;
     }
 
     .img-libro {
@@ -540,11 +525,12 @@ h4 {
         border-radius: 4%;
     }
 
+
 }
 
 @media(max-width:900px) {
     .main-header {
-        padding-left: 75px;
+        padding-left: 40px;
         font-size: 1.2rem;
     }
 
@@ -553,8 +539,49 @@ h4 {
         padding-bottom: 180%;
     }
 
-    .main-container {
-        min-width: 110%;
+    .sidebar_menu {
+        width: 0;
+        padding: 0;
+    }
+
+    .sidebar_menu .Nav_Item {
+        display: none;
+    }
+
+    .sidebar_menu.open .Nav_Item {
+        display: block;
+        margin-top: 20px;
+        height: 100vw;
+    }
+
+    .sidebar_menu.open {
+        width: 100vw;
+    }
+
+    .Dashboard_Text {
+        left: 0;
+
+    }
+
+    /* Mostrar solo el botón hamburguesa */
+    .sidebar_menu .Logo #Button {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 10px;
+    }
+
+    /* El botón hamburguesa siempre visible */
+    .sidebar_menu .Logo #Button {
+        display: block;
+    }
+
+    .Dashboard_Text h1 {
+        font-size: 1.3rem;
+    }
+
+    .Dashboard_Text h2 {
+        font-size: 1.2rem;
     }
 
     .img-libro {
@@ -566,22 +593,57 @@ h4 {
         margin-right: 20px;
         border-radius: 4%;
     }
-
-    .gallery-title {
-        font-size: 2.5rem;
-    }
 }
 
 
 @media(max-width:768px) {
     .main-header {
-        padding-left: 75px;
+        padding-left: 44px;
         font-size: 1.2rem;
+    }
+
+    .img-grid {
+        flex-direction: column;
+    }
+
+    .img-grid img {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+    }
+
+    .sidebar_menu {
+        width: 0;
+        padding: 0;
+    }
+
+    .sidebar_menu .Nav_Item {
+        display: none;
+    }
+
+    .sidebar_menu.open .Nav_Item {
+        display: block;
+        margin-top: 20px;
+        height: 100vw;
     }
 
     .sidebar_menu.open {
         width: 100vw;
     }
+
+    /* Mostrar solo el botón hamburguesa */
+    .sidebar_menu .Logo #Button {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 10px;
+    }
+
+    /* El botón hamburguesa siempre visible */
+    .sidebar_menu .Logo #Button {
+        display: block;
+    }
+
 
     .img-libro {
         min-width: 90px;
@@ -593,21 +655,30 @@ h4 {
         border-radius: 4%;
     }
 
-    .Dashboard_Text h1 {
-        font-size: 1.3rem;
+    .Dashboard_Text .gallery-title {
+        font-size: 2rem;
     }
 
-    .Dashboard_Text h2 {
-        font-size: 1.1rem;
+    .gallery-grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    .gallery-title {
-        font-size: 2.8rem;
+    .gallery-item {
+        width: 80%;
+        margin: 20px 0;
     }
+
+    .gallery-item img {
+        max-width: 90%;
+    }
+
 
     .main-container {
-        margin-left: 10px;
-        min-width: 106%;
+        margin-left: 32px;
+        width: 103%;
     }
 
     .video-container-vertical {
@@ -618,12 +689,12 @@ h4 {
 
 @media (max-width: 500px) {
     .main-header {
-        padding-left: 75px;
+        padding-left: 40px;
         font-size: 1.2rem;
     }
 
     .main-container {
-        min-width: 124%;
+        width: 124%;
     }
 
     .sidebar_menu li .Menu_btn {
@@ -640,8 +711,9 @@ h4 {
         border-radius: 4%;
     }
 
-    .gallery-title {
-        font-size: 2.5rem;
+    .main-container {
+        margin-left: 80px;
+        width: 350px;
     }
 
     .video-container-vertical {
@@ -652,7 +724,7 @@ h4 {
 
 @media (max-width: 450px) {
     .main-header {
-        padding-left: 75px;
+        padding-left: 40px;
         font-size: 1rem;
     }
 
@@ -672,13 +744,10 @@ h4 {
     }
 
     .main-container {
-        margin-left: 10px;
-        min-width: 120%;
+        margin-left: 80px;
+        width: 350px;
     }
 
-    .gallery-title {
-        font-size: 2.5rem;
-    }
 
     .video-container-vertical {
         max-width: 90%;
@@ -688,7 +757,7 @@ h4 {
 
 @media (max-width: 390px) {
     .main-header {
-        padding-left: 75px;
+        padding-left: 40px;
         font-size: 1rem;
     }
 
@@ -708,13 +777,10 @@ h4 {
     }
 
     .main-container {
-        margin-left: 29px;
-        min-width: 105%;
+        margin-left: 80px;
+        width: 350px;
     }
 
-    .gallery-title {
-        font-size: 2.5rem;
-    }
 
     .video-container-vertical {
         max-width: 90%;
@@ -724,20 +790,8 @@ h4 {
 
 @media (max-width: 350px) {
     .main-header {
-        padding-left: 75px;
+        padding-left: 40px;
         font-size: 0.9rem;
-    }
-
-    .sidebar_menu {
-        position: fixed;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 60px;
-        background: #356859;
-        padding: 6px 6px;
-        z-index: 99;
-        transition: all 0.5s ease;
     }
 
     .Dashboard_Text h1,
@@ -771,14 +825,9 @@ h4 {
 
 
     .main-container {
-        margin-left: 30px;
-        min-width: 90%;
+        width: 300px;
     }
 
-    .gallery-title {
-        font-size: 2.5rem;
-
-    }
 
     .video-container-vertical {
         max-width: 90%;
