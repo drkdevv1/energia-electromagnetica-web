@@ -1,1 +1,2 @@
-Página web sobre la Energía Electromagnética creada en HTML, CSS y JavaScript.
+# Página web sobre la Energía Electromagnética 
+- Tecnologías usadas: HTML, CSS y JavaScript.
