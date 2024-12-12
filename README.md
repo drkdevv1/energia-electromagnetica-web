@@ -1,2 +1,5 @@
 # Página web sobre la Energía Electromagnética 
-- Tecnologías usadas: HTML, CSS y JavaScript.
+### Tecnologías utilizadas:
+- HTML
+- CSS
+- JavaScript
